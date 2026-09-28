@@ -1,1 +1,1 @@
-Pagina de carrito de compras, en la que encontraras la posibilidad de comprar productos,navegar por la pagina, la misma es responsiva para pantallas pequeñas
+Pagina de carrito de compras, en la que encontraras la posibilidad de comprar productos,navegar por la pagina, la misma es responsiva para pantallas pequeñas.
