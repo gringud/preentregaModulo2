@@ -1,0 +1,187 @@
+.footer{
+    background-color: #1a1a1a; /* Fondo oscuro elegante */
+    color: #e0e0e0; /* Texto gris claro para que no canse la vista */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding-top: 50px; /* Espaciado arriba */
+    display: flex;
+    flex-direction: column;
+    .footer-contenedor{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px 40px 40px;
+        gap: 30px;        
+        .footer-col{
+            flex: 1;//todas las columnas miden lo mismo
+            min-width: 220px;
+            .img-footer{
+                height: 70px;
+                
+                filter: brightness(0) invert(1); /*Convierto el logo en blanco*/
+            }
+            .footer-desc{
+                line-height: 1.6;
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            .redes-sociales{
+                display: flex;
+                gap: 15px;
+                .redes-icon{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 35px;
+                    height: 35px;
+                    background-color: #333333;
+                    color: #ffffff;
+                    text-decoration: none;
+                    border-radius: 50%;
+                    transition: background-color 0.3s ease;
+                    &:hover{
+                        background-color: #007bff;
+                    }
+                }
+            }
+            h3{
+                color: #ffffff;
+                font-size: 18px;
+                margin-bottom: 20px;
+                position: relative; /* Necesario para la línea decorativa de abajo */
+                &::after{   //linea de abajo de contacto
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -8px;
+                    width: 40px;
+                    height: 2px;
+                    background-color: #007bff;
+                }
+            }
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li{
+                    margin-bottom: 12px;
+                    a{
+                        text-decoration: none;
+                        color: #e0e0e0;
+                        transition: color 0.3s ease;
+                        &:hover{
+                            color: #007bff;
+                        }
+                    }
+                }
+            }
+            .newsletter-form{
+                display: flex;
+                margin-top: 15px;
+                input{
+                    width: 100%;
+                    padding: 10px 15px;
+                    border: none;
+                    border-radius: 4px 0 0 4px;
+                    outline: none;
+                    font-family: inherit;
+                }
+                button{
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 0 4px 4px 0;
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: background-color 0.3s ease;
+                    &:hover{
+                        background-color: #0056b3;
+                    }
+                }
+            }
+        }
+    }
+    .footer-buttom{
+        background-color: #111111;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 13px;
+        color: #aaaaaa;
+        p{
+
+        }
+        .legal-links{
+            display: flex;
+            gap: 20px;
+            a{
+                color: #aaaaaa;
+                text-decoration: none;
+                transition: color 0.3s ease;
+                &:hover{
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/* <footer class="footer">
+        <div class="footer-contenedor">
+            <!-- Columna 1 -->
+            <div class="footer-col">
+                <img src="./assets/img/Logo.png" alt="" class="img-footer">
+                <p class="footer-desc">Ofrecemos los mejores productos con la más alta calidad para acompañarte en tu día a día.</p>
+                <div class="redes-sociales">
+                    <a href="" class="redes-icon">Fb</a>
+                    <a href="" class="redes-icon">Ig</a>
+                    <a href="" class="redes-icon">Tw</a>
+                </div>
+            </div>
+            <!-- Columna 2 -->
+            <div class="footer-col">
+                <h3>Enlaces Rapidos</h3>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Productos</li>
+                    <li>Sobre Nosotros</li>
+                    <li>Preguntas Frecuentes</li>
+                </ul>
+            </div>
+            <!-- Columna 3 -->
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <ul class="contacto-info">
+                    <li>📍 Saavedra, Ciudad Autónoma de Buenos Aires</li>
+                    <li>📞 +54 11 1234-5678</li>
+                    <li>✉️ contacto@tuweb.com.ar</li>
+                </ul>
+            </div>
+            <!-- Columna 4 -->
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Suscribite para recibir nuestras últimas novedades y ofertas especiales.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-buttom">
+            <p>&copy; 2026 Tu Empresa. Todos los derechos reservados.</p>
+            <div class="legal-links">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer> */

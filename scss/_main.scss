@@ -1,0 +1,88 @@
+.contenedor-productos{
+    max-width: 1200px;
+    margin: 60px auto; /* Centra el contenido y lo separa del nav y footer */
+    padding: 0 20px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    .titulo-seccion{
+        text-align: center;
+        color: #333333;
+        font-size: 33px;
+        margin-bottom: 40px;
+    }
+    .grilla-productos{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+        /* background-color: aqua; */
+        .tarjeta{
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            &:hover{
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+            .card-img{
+                width: 100%;
+                height: 200px;
+                object-fit: contain;
+            }
+            .card-info{
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                .card-descripcion{
+                    font-size: 18px;
+                    color: #333333;
+                    margin: 0 0 10px 0;
+                }
+                .card-precio{
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: #007BFF; /* Azul corporativo */
+                    margin: 0 0 20px 0;
+                }
+                .card-btn{
+                    margin-top: auto;
+                    background-color: #007BFF;
+                    color: #ffffff;
+                    border: none;
+                    padding: 12px;
+                    border-radius: 6px;
+                    font-size: 600;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    &:hover{
+                        background-color: #0056b3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/* <main class="contenedor-productos">
+        <h2 class="titulo-seccion">Nuestros Productos</h2>
+        <!--Tarjeta inicio-->
+        <div class="grilla-cards">
+            <div class="tarjeta">
+                <img class="card-img" src="./assets/img/productos/auricular.webp" alt="auriculares">
+                <div class="card-info">
+                    <h3 class="card-descripcion">Auriculares Inalambricos</h3>
+                    <p class="card-precio">$ 45.000</p>
+                    <button class="card-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div> */

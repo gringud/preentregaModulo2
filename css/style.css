@@ -1,0 +1,536 @@
+@charset "UTF-8";
+/* sass --watch scss:css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-principal {
+  background-color: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.header-principal .nav-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 12px 20px;
+  max-width: 1200px;
+}
+.header-principal .nav-todo .nav-marca {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  order: 1;
+}
+.header-principal .nav-todo .nav-marca .img-logo {
+  width: 80px;
+}
+.header-principal .nav-todo .nav-marca .nombre-marca {
+  color: #000000;
+  font-weight: bold;
+}
+.header-principal .nav-todo .menu-check {
+  display: none;
+}
+.header-principal .nav-todo .menu-hamburguesa {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  cursor: pointer;
+  order: 2;
+}
+.header-principal .nav-todo .menu-hamburguesa span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.header-principal .nav-todo .nav-centro {
+  order: 2;
+}
+.header-principal .nav-todo .nav-centro .nav-enlace {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+}
+.header-principal .nav-todo .nav-centro .nav-enlace li a {
+  text-decoration: none;
+  color: #555555;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+.header-principal .nav-todo .nav-centro .nav-enlace li a:hover {
+  color: #007bff;
+}
+.header-principal .nav-todo .nav-centro .nav-enlace .activo {
+  color: #007BFF;
+}
+.header-principal .nav-todo .nav-centro .nav-enlace .desplegable {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+}
+.header-principal .nav-todo .nav-centro .nav-enlace .desplegable .desplegable-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 180px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+.header-principal .nav-todo .nav-centro .nav-enlace .desplegable .desplegable-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333333;
+  font-size: 16px;
+}
+.header-principal .nav-todo .nav-centro .nav-enlace .desplegable .desplegable-menu li a:hover {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+.header-principal .nav-todo .nav-centro .nav-enlace .desplegable:hover .desplegable-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.header-principal .nav-todo .nav-derecha {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  order: 3;
+}
+.header-principal .nav-todo .nav-derecha .buscador {
+  display: flex;
+  background-color: #f0f2f5;
+  border-radius: 20px;
+  padding: 4px 12px;
+  border: 1px solid transparent;
+  transition: border 0.3s ease;
+}
+.header-principal .nav-todo .nav-derecha .buscador input {
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 6px;
+  width: 200px;
+  font-size: 14px;
+}
+.header-principal .nav-todo .nav-derecha .buscador button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.6;
+}
+.header-principal .nav-todo .nav-derecha .buscador button:hover {
+  opacity: 1;
+}
+.header-principal .nav-todo .nav-derecha .buscador:focus-within {
+  border: 1px solid #007bff;
+  background-color: #ffffff;
+}
+.header-principal .nav-todo .nav-derecha .nav-usuario-carrito {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header-principal .nav-todo .nav-derecha .icono-nav {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.header-principal .nav-todo .nav-derecha .btn-loguin {
+  background-color: #007BFF;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+.header-principal .nav-todo .nav-derecha .btn-loguin:hover {
+  background-color: #0056b3;
+}
+.header-principal .nav-todo .nav-derecha .btn-carrito {
+  position: relative;
+  padding: 5px;
+}
+.header-principal .nav-todo .nav-derecha .btn-carrito .img-carrito {
+  width: 30px;
+  transition: transform 0.2s ease;
+}
+.header-principal .nav-todo .nav-derecha .btn-carrito:hover .img-carrito {
+  transform: scale(1.1);
+}
+.header-principal .nav-todo .nav-derecha .btn-carrito .carrito-contador {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: #ff3b30;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4px;
+  border: 2px solid #ffffff;
+}
+.header-principal .nav-todo {
+  /* --- REGLAS RESPONSIVAS DEBAJO DE 918PX --- */
+}
+@media (max-width: 918px) {
+  .header-principal .nav-todo {
+    flex-wrap: wrap;
+    /* Esconde el menú central horizontal */
+  }
+  .header-principal .nav-todo .nav-centro {
+    display: none;
+  }
+  .header-principal .nav-todo .menu-hamburguesa {
+    display: flex;
+    order: 2;
+  }
+  .header-principal .nav-todo .nav-derecha {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  .header-principal .nav-todo .nav-derecha .buscador {
+    flex: 1;
+  }
+  .header-principal .nav-todo .nav-derecha .buscador input {
+    width: 100%;
+  }
+  .header-principal .nav-todo .nav-centro {
+    display: block;
+    order: 4;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+  .header-principal .nav-todo .nav-centro .nav-enlace {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0 5px 0;
+    border-top: 1px solid #eeeeee;
+    margin-top: 10px;
+  }
+  .header-principal .nav-todo .nav-centro .nav-enlace .desplegable {
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .header-principal .nav-todo .nav-centro .nav-enlace .desplegable .desplegable-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    padding-left: 15px;
+    display: none;
+  }
+  .header-principal .nav-todo .nav-centro .nav-enlace .desplegable:hover .desplegable-menu {
+    display: block;
+  }
+  .header-principal .nav-todo .menu-check:checked ~ .nav-centro {
+    max-height: 350px;
+  }
+}
+
+.contenedor-productos {
+  max-width: 1200px;
+  margin: 60px auto; /* Centra el contenido y lo separa del nav y footer */
+  padding: 0 20px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.contenedor-productos .titulo-seccion {
+  text-align: center;
+  color: #333333;
+  font-size: 33px;
+  margin-bottom: 40px;
+}
+.contenedor-productos .grilla-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  /* background-color: aqua; */
+}
+.contenedor-productos .grilla-productos .tarjeta {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.contenedor-productos .grilla-productos .tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+.contenedor-productos .grilla-productos .tarjeta .card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+.contenedor-productos .grilla-productos .tarjeta .card-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.contenedor-productos .grilla-productos .tarjeta .card-info .card-descripcion {
+  font-size: 18px;
+  color: #333333;
+  margin: 0 0 10px 0;
+}
+.contenedor-productos .grilla-productos .tarjeta .card-info .card-precio {
+  font-size: 22px;
+  font-weight: bold;
+  color: #007BFF; /* Azul corporativo */
+  margin: 0 0 20px 0;
+}
+.contenedor-productos .grilla-productos .tarjeta .card-info .card-btn {
+  margin-top: auto;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contenedor-productos .grilla-productos .tarjeta .card-info .card-btn:hover {
+  background-color: #0056b3;
+}
+
+/* <main class="contenedor-productos">
+        <h2 class="titulo-seccion">Nuestros Productos</h2>
+        <!--Tarjeta inicio-->
+        <div class="grilla-cards">
+            <div class="tarjeta">
+                <img class="card-img" src="./assets/img/productos/auricular.webp" alt="auriculares">
+                <div class="card-info">
+                    <h3 class="card-descripcion">Auriculares Inalambricos</h3>
+                    <p class="card-precio">$ 45.000</p>
+                    <button class="card-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div> */
+.footer {
+  background-color: #1a1a1a; /* Fondo oscuro elegante */
+  color: #e0e0e0; /* Texto gris claro para que no canse la vista */
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding-top: 50px; /* Espaciado arriba */
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 40px 40px;
+  gap: 30px;
+}
+.footer .footer-contenedor .footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+.footer .footer-contenedor .footer-col .img-footer {
+  height: 70px;
+  filter: brightness(0) invert(1); /*Convierto el logo en blanco*/
+}
+.footer .footer-contenedor .footer-col .footer-desc {
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.footer .footer-contenedor .footer-col .redes-sociales {
+  display: flex;
+  gap: 15px;
+}
+.footer .footer-contenedor .footer-col .redes-sociales .redes-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: #333333;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+.footer .footer-contenedor .footer-col .redes-sociales .redes-icon:hover {
+  background-color: #007bff;
+}
+.footer .footer-contenedor .footer-col h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative; /* Necesario para la línea decorativa de abajo */
+}
+.footer .footer-contenedor .footer-col h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 2px;
+  background-color: #007bff;
+}
+.footer .footer-contenedor .footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .footer-contenedor .footer-col ul li {
+  margin-bottom: 12px;
+}
+.footer .footer-contenedor .footer-col ul li a {
+  text-decoration: none;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+.footer .footer-contenedor .footer-col ul li a:hover {
+  color: #007bff;
+}
+.footer .footer-contenedor .footer-col .newsletter-form {
+  display: flex;
+  margin-top: 15px;
+}
+.footer .footer-contenedor .footer-col .newsletter-form input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  font-family: inherit;
+}
+.footer .footer-contenedor .footer-col .newsletter-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.footer .footer-contenedor .footer-col .newsletter-form button:hover {
+  background-color: #0056b3;
+}
+.footer .footer-buttom {
+  background-color: #111111;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #aaaaaa;
+}
+.footer .footer-buttom .legal-links {
+  display: flex;
+  gap: 20px;
+}
+.footer .footer-buttom .legal-links a {
+  color: #aaaaaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer .footer-buttom .legal-links a:hover {
+  color: #ffffff;
+}
+
+/* <footer class="footer">
+        <div class="footer-contenedor">
+            <!-- Columna 1 -->
+            <div class="footer-col">
+                <img src="./assets/img/Logo.png" alt="" class="img-footer">
+                <p class="footer-desc">Ofrecemos los mejores productos con la más alta calidad para acompañarte en tu día a día.</p>
+                <div class="redes-sociales">
+                    <a href="" class="redes-icon">Fb</a>
+                    <a href="" class="redes-icon">Ig</a>
+                    <a href="" class="redes-icon">Tw</a>
+                </div>
+            </div>
+            <!-- Columna 2 -->
+            <div class="footer-col">
+                <h3>Enlaces Rapidos</h3>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Productos</li>
+                    <li>Sobre Nosotros</li>
+                    <li>Preguntas Frecuentes</li>
+                </ul>
+            </div>
+            <!-- Columna 3 -->
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <ul class="contacto-info">
+                    <li>📍 Saavedra, Ciudad Autónoma de Buenos Aires</li>
+                    <li>📞 +54 11 1234-5678</li>
+                    <li>✉️ contacto@tuweb.com.ar</li>
+                </ul>
+            </div>
+            <!-- Columna 4 -->
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Suscribite para recibir nuestras últimas novedades y ofertas especiales.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-buttom">
+            <p>&copy; 2026 Tu Empresa. Todos los derechos reservados.</p>
+            <div class="legal-links">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer> */
+
+/*# sourceMappingURL=style.css.map */

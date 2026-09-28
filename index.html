@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiTienda</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header-principal">
+    <nav class="nav-todo">
+        <a href="#" class="nav-marca">
+            <img class="img-logo" src="./assets/img/Logo.png" alt="Logo">
+            <span class="nombre-marca">MiTienda</span>
+        </a>
+
+        <input type="checkbox" id="menu-check" class="menu-check">  <!-- Boron hamburguesa menu -->
+        <label for="menu-check" class="menu-hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="nav-derecha">
+            <form class="buscador">
+                <input type="text" placeholder="Buscar productos..." required>
+                <button type="submit">🔍</button>
+            </form>
+            <div class="nav-usuario-carrito">
+                <a href="#" class="icono-nav btn-loguin">
+                    <span>Ingresar</span>
+                </a>
+                <a href="#" class="icono-nav btn-carrito">
+                    <img class="img-carrito" src="./assets/img/carrito-de-compras.png" alt="carrito">
+                    <span class="carrito-contador">3</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="nav-centro">
+            <ul class="nav-enlace">
+                <li><a href="#" class="activo">Inicio</a></li>
+                <li class="desplegable">
+                    <a href="#">Productos ▾</a>
+                    <ul class="desplegable-menu">
+                        <li><a href="#">Tecnología</a></li>
+                        <li><a href="#">Accesorios</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+    <main class="contenedor-productos">
+        <h2 class="titulo-seccion">Nuestros Productos</h2>
+        <div class="grilla-productos">
+
+            <!--Tarjeta inicio-->
+            <div class="tarjeta">
+                <img class="card-img" src="./assets/img/productos/auricular.webp" alt="auriculares">
+                <div class="card-info">
+                    <h3 class="card-descripcion">Auriculares Inalambricos</h3>
+                    <p class="card-precio">$ 45.000</p>
+                    <button class="card-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <!--Tarjeta inicio-->
+            <div class="tarjeta">
+                <img class="card-img" src="./assets/img/productos/reloj inteligente.webp" alt="auriculares">
+                <div class="card-info">
+                    <h3 class="card-descripcion">Reloj Inteligente</h3>
+                    <p class="card-precio">$ 62.000</p>
+                    <button class="card-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+            
+            <!--Tarjeta inicio-->
+            <div class="tarjeta">
+                <img class="card-img" src="./assets/img/productos/Teclado Mecánico.webp" alt="auriculares">
+                <div class="card-info">
+                    <h3 class="card-descripcion">Teclado Mecánico</h3>
+                    <p class="card-precio">$ 85.000</p>
+                    <button class="card-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+            
+            <!--Tarjeta inicio-->
+            <div class="tarjeta">
+                <img class="card-img" src="./assets/img/productos/Mouse Gamer.jpg" alt="auriculares">
+                <div class="card-info">
+                    <h3 class="card-descripcion">Mouse Gamer</h3>
+                    <p class="card-precio">$ 35.000</p>
+                    <button class="card-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+            
+            <!--Tarjeta inicio-->
+            <div class="tarjeta">
+                <img class="card-img" src="./assets/img/productos/Monitor 24 Full HD.webp" alt="auriculares">
+                <div class="card-info">
+                    <h3 class="card-descripcion">Monitor 24" Full HD</h3>
+                    <p class="card-precio">$ 180.000</p>
+                    <button class="card-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+            
+            <!--Tarjeta inicio-->
+            <div class="tarjeta">
+                <img class="card-img" src="./assets/img/productos/Silla Ergonómica.webp" alt="auriculares">
+                <div class="card-info">
+                    <h3 class="card-descripcion">Silla Ergonómica</h3>
+                    <p class="card-precio">$ 210.000</p>
+                    <button class="card-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+            
+            <!--Tarjeta inicio-->
+            <div class="tarjeta">
+                <img class="card-img" src="./assets/img/productos/Cámara Web 1080p.jpg" alt="auriculares">
+                <div class="card-info">
+                    <h3 class="card-descripcion">Cámara Web 1080p</h3>
+                    <p class="card-precio">$ 42.000</p>
+                    <button class="card-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+            
+            <!--Tarjeta inicio-->
+            <div class="tarjeta">
+                <img class="card-img" src="./assets/img/productos/Micrófono Condensador.png" alt="auriculares">
+                <div class="card-info">
+                    <h3 class="card-descripcion">Micrófono Condensador</h3>
+                    <p class="card-precio">$ 45.000</p>
+                    <button class="card-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+            
+            <!--Tarjeta inicio-->
+            <div class="tarjeta">
+                <img class="card-img" src="./assets/img/productos/Pad Mouse XL.webp" alt="auriculares">
+                <div class="card-info">
+                    <h3 class="card-descripcion">Pad Mouse XL</h3>
+                    <p class="card-precio">$ 15.000</p>
+                    <button class="card-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+            
+            <!--Tarjeta inicio-->
+            <div class="tarjeta">
+                <img class="card-img" src="./assets/img/productos/Soporte para Monitor.jfif" alt="auriculares">
+                <div class="card-info">
+                    <h3 class="card-descripcion">Soporte para Monitor</h3>
+                    <p class="card-precio">$ 28.000</p>
+                    <button class="card-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <!-- Columna 1 -->
+            <div class="footer-col">
+                <img src="./assets/img/Logo.png" alt="" class="img-footer">
+                <p class="footer-desc">Ofrecemos los mejores productos con la más alta calidad para acompañarte en tu día a día.</p>
+                <div class="redes-sociales">
+                    <a href="" class="redes-icon">Fb</a>
+                    <a href="" class="redes-icon">Ig</a>
+                    <a href="" class="redes-icon">Tw</a>
+                </div>
+            </div>
+            <!-- Columna 2 -->
+            <div class="footer-col">
+                <h3>Enlaces Rapidos</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+            <!-- Columna 3 -->
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <ul class="contacto-info">
+                    <li>📍 Saavedra, Ciudad Autónoma de Buenos Aires</li>
+                    <li>📞 +54 11 1234-5678</li>
+                    <li>✉️ contacto@contacto.com.ar</li>
+                </ul>
+            </div>
+            <!-- Columna 4 -->
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Suscribite para recibir nuestras últimas novedades y ofertas especiales.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-buttom">
+            <p>&copy; 2026 Tu Empresa. Todos los derechos reservados.</p>
+            <div class="legal-links">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
